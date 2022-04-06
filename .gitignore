@@ -9,3 +9,4 @@
 
 #idea ignore files
 /.idea
+/target/classes
