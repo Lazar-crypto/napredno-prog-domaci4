@@ -21,13 +21,7 @@ public class Main2 {
         try(FileWriter out = new FileWriter("responses.json")){
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
-            Arrays.stream(responses).forEach(res-> {
-                try {
-                    out.write(gson.toJson(res));
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            });
+            out.write(gson.toJson(responses));
 
         } catch (IOException e) {
             e.printStackTrace();
